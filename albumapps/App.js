@@ -11,10 +11,10 @@ export default class App extends Component {
     loggedIn: null
   };
 
-  async componentDidMount(){
+  componentDidMount(){
 
     // initializeFirebase();
-    await firebase.initializeApp({
+    firebase.initializeApp({
       apiKey: 'AIzaSyCTJgTf8cjt-s-bD1-Pf4vWMGmi4KtmCDQ',
       authDomain: 'albumauth-c48a2.firebaseapp.com',
       databaseURL: 'https://albumauth-c48a2.firebaseio.com',
@@ -23,7 +23,7 @@ export default class App extends Component {
       messagingSenderId: '1072928945232'
     });
 
-    await firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged((user) => {
       if (user){
         this.setState({ loggedIn: true });
       } else{
