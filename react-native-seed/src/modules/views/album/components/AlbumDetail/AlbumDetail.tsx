@@ -1,7 +1,6 @@
 import React from 'react';
-import Card from '../../../common/Card';
 import { View, Text, Image } from 'react-native';
-import CardSection from '../../../common/CardSection';
+import { CardSection, Card } from '../../../common';
 
 import { AlbumModel } from '../../../../models';
 

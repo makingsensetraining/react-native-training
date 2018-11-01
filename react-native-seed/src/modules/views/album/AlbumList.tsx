@@ -5,7 +5,6 @@ import { GeneralModel, UserModel, AlbumModel } from '../../models';
 import { ENV } from '../../../constants';
 import AlbumDetail from './components/AlbumDetail';
 
-
 export interface IAlbumListProps {
     currentUser: UserModel.IUser;
     albumMap: AlbumModel.IAlbum[];

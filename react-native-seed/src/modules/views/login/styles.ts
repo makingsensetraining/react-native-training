@@ -55,13 +55,11 @@ export default StyleSheet.create({
   loginContainer: {
     backgroundColor: STYLE.COLOR.WHITE,
     flex: 1,
-    justifyContent: 'flex-start',
-    padding: 24
+    padding: 10
   },
   keyboardContainer: {
     flex: 1,
-    justifyContent: 'space-between',
-    backgroundColor: '#fff'
+    backgroundColor: STYLE.COLOR.WHITE,
   },
   fullScreenImageContainer: {
     flex: 1
@@ -69,5 +67,17 @@ export default StyleSheet.create({
   fullScreenImage: {
     width: '100%',
     height: '100%'
+  },
+  button: {
+    flex: 1,
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    backgroundColor: '#48BBEC',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#48BBEC',
+    marginLeft: 5,
+    marginRight: 5,
+    height: 60,
   }
 });

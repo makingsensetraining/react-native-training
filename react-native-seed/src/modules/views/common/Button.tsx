@@ -3,7 +3,6 @@ import { TouchableOpacity, Text } from 'react-native';
 import styles from './styles';
 
 export interface IButtonProps {
-    children: any;
     onPress: () => void;
 }
 

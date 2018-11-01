@@ -29,24 +29,22 @@ export default StyleSheet.create({
     cardContainer: {
         borderWidth: 1,
         borderRadius: 2,
-        borderColor: STYLE.COLOR.SECONDARY,
+        borderColor: '#ddd',
         borderBottomWidth: 0,
-        shadowColor: STYLE.COLOR.BLACK,
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 2,
         elevation: 1,
-        marginLeft: 5,
-        marginRight: 5,
         marginTop: 10
     },
 
     cardSectionContainer: {
         borderBottomWidth: 1,
         padding: 5,
-        backgroundColor: STYLE.COLOR.BLACK,
+        backgroundColor: '#fff',
         flexDirection: 'row',
-        borderColor: STYLE.COLOR.PRIMARY,
+        borderColor: '#ddd',
         justifyContent: 'flex-start',
         position: 'relative'
     },
@@ -72,4 +70,10 @@ export default StyleSheet.create({
         marginRight: 5,
         height: 60,
     },
+
+    spinnerContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
 });

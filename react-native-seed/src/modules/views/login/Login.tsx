@@ -1,11 +1,8 @@
 import React from 'react';
-import { Image, View, Text, TextInput, KeyboardAvoidingView, ImageBackground } from 'react-native';
+import { View, Text, KeyboardAvoidingView } from 'react-native';
 import { NavigationScreenProp, NavigationStackScreenOptions } from 'react-navigation';
-import { Button } from 'react-native-elements';
 
-import Field from '../common/Field';
-import Card from '../common/Card';
-import CardSection from '../common/CardSection';
+import { Field, Card, CardSection, Button, Spinner } from '../common';
 
 import { ENV, STYLE } from '../../../constants';
 import styles from './styles';
@@ -57,46 +54,45 @@ export default class Login extends React.PureComponent<ILoginProps, ILoginState>
           style={styles.keyboardContainer}
           keyboardVerticalOffset={Login.isAndroid ? ENV.KEYBOARD_VERTICAL_OFFSET : 0}
         >
-          <View>
-              <View>
-                <Field
-                  secureTextEntry={false}
-                  labelTitle={'EMAIL:'}
-                  placeholder="user@domain.com"
-                  textValue={email}
-                  onChangeText={(value) => this.handleOnChange('email', value)}
-                />
-              </View>
+          <Card>
+            <CardSection>
+              <Field
+                secureTextEntry={false}
+                labelTitle={'EMAIL:'}
+                placeholder="user@domain.com"
+                textValue={email}
+                onChangeText={(value) => this.handleOnChange('email', value)}
+              />
+            </CardSection>
 
-              <View>
-                <Field
-                    secureTextEntry={true}
-                    labelTitle={'Password:'.toUpperCase()}
-                    placeholder="Enter your password..."
-                    textValue={password}
-                    onChangeText={(value) => this.handleOnChange('password', value)}
-                />
-              </View>
+            <CardSection>
+              <Field
+                secureTextEntry={true}
+                labelTitle={'Password:'.toUpperCase()}
+                placeholder="Enter your password..."
+                textValue={password}
+                onChangeText={(value) => this.handleOnChange('password', value)}
+              />
+            </CardSection>
 
-              <View>
-                <Button
-                  loading={isLoading}
-                  disabled={isLoading}
-                  onPress={this.login}
-                  title="Login"
-                  backgroundColor={STYLE.COLOR.PRIMARY}
-                  borderRadius={STYLE.BORDER.QUARTER}
-                  fontSize={STYLE.FONT.SIZE.BUTTON_LARGE}
-                  fontWeight={STYLE.FONT.WEIGHTS.MEDIUM}
-                />
-              </View>
-          </View>
+            <CardSection>
+              {this.renderButton()}
+            </CardSection>
+          </Card>
         </KeyboardAvoidingView>
       </View>
 
     );
   }
 
+  private renderButton() {
+
+    if (this.props.isLoading) {
+      return <Spinner size={'small'} />;
+    }
+
+    return <Button onPress={this.login}> Login </Button>;
+  }
   private handleOnChange(field: 'email' | 'password', value: string) {
     debugger;
     this.setState({ [field]: value } as any);
