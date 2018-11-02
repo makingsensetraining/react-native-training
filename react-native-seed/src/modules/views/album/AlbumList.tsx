@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import { GeneralModel, UserModel, AlbumModel } from '../../models';
 import { ENV } from '../../../constants';
@@ -22,9 +22,9 @@ export default class AlbumList extends React.PureComponent<IAlbumListProps, {}> 
         console.log(' on AlbumList render');
         const { albumMap } = this.props;
         return (
-            <View>
+            <ScrollView>
                 {albumMap.map(album => <AlbumDetail key={album.title} album={album}/>)}
-            </View>
+            </ScrollView>
         );
     }
 }
