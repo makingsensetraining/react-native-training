@@ -102,7 +102,9 @@ export class ApiService {
     const requestOptions = { body: options.body, headers: options.headers, method: options.method };
 
     return this.http({ url: `${this.apiUrl}/${path}?${this.parseQuery(options.query)}`, ...requestOptions }).pipe(
-      map(data => data.response as T),
+      map(data => {
+        return data.response as T;
+      }),
       retryWhen((error: Observable<AjaxResponse>) => error.pipe(
         switchMap((e: AjaxResponse) => {
           if (e.status !== 401) return of(e).pipe(delay(this.retryTimeout));

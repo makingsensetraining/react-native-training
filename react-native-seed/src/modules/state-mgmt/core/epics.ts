@@ -55,8 +55,7 @@ export const coreGetEpicBootstrap: Epic<IAction, IAction, IRootState, IEpicDepen
     ).pipe(
       /** side effect to navigate to initial authenticated view and reset the router so the user can't go back to the login */
       tap(() => {
-        debugger;
-        const resetAction = StackActions.reset({ index: 0, actions: [NavigationActions.navigate({ routeName: 'TodoList' })] });
+        const resetAction = StackActions.reset({ index: 0, actions: [NavigationActions.navigate({ routeName: 'AlbumList' })] });
         deps.navigationService.navigation.dispatch(resetAction);
       }),
       /** catches possible errors with statements inside this mergeMap (not the api service from users since this epic only emits an action) */

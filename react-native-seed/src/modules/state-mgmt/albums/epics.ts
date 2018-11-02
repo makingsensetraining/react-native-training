@@ -10,7 +10,9 @@ export const todoGetEpicGetAlbumList: Epic<IAction, IAction, IRootState, IEpicDe
   action$.pipe(
     ofType(ActionType.SET_ALBUM_LIST_START),
     mergeMap(({ payload }) => deps.apiService.getAlbumList(payload.query).pipe(
-      map(res => actions.setAlbumListSuccess(res.docs)),
+      map(res => {
+        return actions.setAlbumListSuccess(res);
+      }),
       catchError(error => of(coreState.actions.epicError(error)))
     ))
   );

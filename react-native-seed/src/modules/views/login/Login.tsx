@@ -4,7 +4,7 @@ import { NavigationScreenProp, NavigationStackScreenOptions } from 'react-naviga
 
 import { Field, Card, CardSection, Button, Spinner } from '../common';
 
-import { ENV, STYLE } from '../../../constants';
+import { ENV } from '../../../constants';
 import styles from './styles';
 
 export interface ILoginProps {
@@ -40,9 +40,8 @@ export default class Login extends React.PureComponent<ILoginProps, ILoginState>
   }
 
   public render() {
-    const { isLoading, hasError } = this.props;
+    const { hasError } = this.props;
     const { email, password } = this.state;
-    debugger;
     return (
       <View style={styles.loginContainer}>
         <Text style={styles.heading1}>Making Sense RN seed</Text>
@@ -94,7 +93,6 @@ export default class Login extends React.PureComponent<ILoginProps, ILoginState>
     return <Button onPress={this.login}> Login </Button>;
   }
   private handleOnChange(field: 'email' | 'password', value: string) {
-    debugger;
     this.setState({ [field]: value } as any);
   }
 

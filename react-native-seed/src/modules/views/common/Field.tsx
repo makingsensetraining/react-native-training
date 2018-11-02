@@ -12,7 +12,6 @@ export interface IFieldProps {
 
 export default class Field extends React.PureComponent<IFieldProps, {}> {
     public render() {
-        debugger;
         const {fieldInput, fieldContainer, fieldLabel } = styles;
         const { labelTitle, placeholder, textValue, secureTextEntry, onChangeText } = this.props;
 

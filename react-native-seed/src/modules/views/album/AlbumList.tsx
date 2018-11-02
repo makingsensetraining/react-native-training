@@ -13,9 +13,14 @@ export interface IAlbumListProps {
 
 export default class AlbumList extends React.PureComponent<IAlbumListProps, {}> {
 
-    public render() {
-        const { albumMap } = this.props;
+    public componentDidMount() {
+        const { fetchAlbumList } = this.props;
+        fetchAlbumList({ page: 1, limit: ENV.PAGINATION.LIMIT, q: {} });
+    }
 
+    public render() {
+        console.log(' on AlbumList render');
+        const { albumMap } = this.props;
         return (
             <View>
                 {albumMap.map(album => <AlbumDetail key={album.title} album={album}/>)}
