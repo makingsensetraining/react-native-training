@@ -67,8 +67,7 @@ export class ApiService {
     }).pipe(delay(300));
   }
 
-  public getAlbumList(query: GeneralModel.IApiQuery): Observable<GeneralModel.IPagination<AlbumModel.IAlbum>> {
-
+  public getAlbumList(query: GeneralModel.IApiQuery): Observable<AlbumModel.IAlbum[]> {
     const response = this.request(ENV.API.ENTITY.ALBUMS, { method: 'GET', query });
     return response;
   }

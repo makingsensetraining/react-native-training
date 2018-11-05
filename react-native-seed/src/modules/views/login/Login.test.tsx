@@ -34,7 +34,7 @@ describe('Login', () => {
     expect(rendered).toMatchSnapshot();
   });
 
-  it('should call initial functions when session is NOT checked mounted', () => {
+  it('should call ini tial functions when session is NOT checked mounted', () => {
     const wrapper = shallow(<Login {...props} />);
     wrapper.update();
     expect(props.setNavigation).toBeCalledWith(props.navigation);
@@ -54,8 +54,8 @@ describe('Login', () => {
     const email = 'email';
     const password = 'password';
     const wrapper = shallow(<Login {...props} />);
-    (wrapper.find('TextInput').first().prop('onChangeText') as any)(email);
-    (wrapper.find('TextInput').last().prop('onChangeText') as any)(password);
+    (wrapper.find('Field').first().prop('onChangeText') as any)(email);
+    (wrapper.find('Field').last().prop('onChangeText') as any)(password);
     const prevState = JSON.parse(JSON.stringify(wrapper.instance().state));
     expect(wrapper.instance().state).toEqual({ ...prevState, email, password });
   });

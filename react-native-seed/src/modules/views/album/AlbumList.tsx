@@ -19,11 +19,11 @@ export default class AlbumList extends React.PureComponent<IAlbumListProps, {}> 
     }
 
     public render() {
-        console.log(' on AlbumList render');
+        console.log(' on AlbumList render ' + this.props.albumMap.length);
         const { albumMap } = this.props;
         return (
             <ScrollView>
-                {albumMap.map(album => <AlbumDetail key={album.title} album={album}/>)}
+                {albumMap.map((album, index) => <AlbumDetail key={index} album={album}/>)}
             </ScrollView>
         );
     }

@@ -1,5 +1,5 @@
-import { GeneralModel, UserModel, TodoModel } from '../modules/models';
-import { IRootState, authState, userState, todoState } from '../modules/state-mgmt/rootState';
+import { GeneralModel, UserModel, TodoModel, AlbumModel } from '../modules/models';
+import { IRootState, authState, userState, todoState, albumState } from '../modules/state-mgmt/rootState';
 
 export const getPaginationOf = (entity: any): GeneralModel.IPagination<any> => ({
   count: 1,
@@ -68,6 +68,33 @@ export const getTodo_4 = (): TodoModel.ITodo => ({
   updatedAt: '2018-08-27',
 });
 
+export const getAlbum_1 = (): AlbumModel.IAlbum => ({
+  _id: '40bf3d38-44da-4021-b555-17a63fa7bab1',
+  title: 'My album title',
+  artist: 'Ferri Test',
+  url: 'https://www.amazon.com/Imaginaerum-Nightwish/dp/B006CBSE86',
+  image: 'https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg',
+  thumbnail_image: 'https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg',
+});
+
+export const getAlbum_2 = (): AlbumModel.IAlbum => ({
+  _id: '5b3f71ec-d9f8-4a2a-afd4-513bc7426ecd',
+  title: 'My album title 2',
+  artist: 'Ferri Test Numer 2',
+  url: 'https://www.amazon.com/Imaginaerum-Nightwish/dp/B006CBSE86',
+  image: 'https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg',
+  thumbnail_image: 'https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg',
+});
+
+export const getAlbum_3 = (): AlbumModel.IAlbum => ({
+  _id: 'e1954b11-04f2-470f-b3f5-25d04acde2da',
+  title: 'My album title 3',
+  artist: 'Ferri Test Numer 3',
+  url: 'https://www.amazon.com/Imaginaerum-Nightwish/dp/B006CBSE86',
+  image: 'https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg',
+  thumbnail_image: 'https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg',
+});
+
 export const getLoginResponse = (): GeneralModel.ILoginResponse => ({
   ...getUser_1(),
   access_token: 'i-am-an-access-token'
@@ -76,11 +103,13 @@ export const getLoginResponse = (): GeneralModel.ILoginResponse => ({
 export const getInitialState = (): IRootState => ({
   auth: { ...authState.initialState },
   user: { ...userState.initialState },
-  todo: { ...todoState.initialState }
+  todo: { ...todoState.initialState },
+  album: { ...albumState.initialState }
 });
 
 export const getState = (): IRootState => ({
   auth: { currentUserId: getUser_1()._id, isLoading: false, hasError: false },
   user: { userMap: { [getUser_1()._id]: getUser_1() } },
-  todo: { todoMap: { [getTodo_1()._id]: getTodo_1(), [getTodo_2()._id]: getTodo_2(), [getTodo_3()._id]: getTodo_3(), [getTodo_4()._id]: getTodo_4() } }
+  todo: { todoMap: { [getTodo_1()._id]: getTodo_1(), [getTodo_2()._id]: getTodo_2(), [getTodo_3()._id]: getTodo_3(), [getTodo_4()._id]: getTodo_4() } },
+  album: { albumMap: [ getAlbum_1(), getAlbum_2() ]},
 });

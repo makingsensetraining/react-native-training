@@ -1,0 +1,372 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlbumList renders without crashing 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 0,
+          "borderColor": "#ddd",
+          "borderRadius": 2,
+          "borderWidth": 1,
+          "elevation": 1,
+          "marginTop": 10,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.1,
+          "shadowRadius": 2,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 1,
+            "borderColor": "#ddd",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 5,
+            "position": "relative",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginLeft": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg",
+              }
+            }
+            style={
+              Object {
+                "height": 50,
+                "width": 50,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "column",
+              "justifyContent": "space-around",
+              "marginLeft": 5,
+            }
+          }
+        >
+          &gt;
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 18,
+              }
+            }
+          >
+            My album title
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Ferri Test
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 1,
+            "borderColor": "#ddd",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 5,
+            "position": "relative",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg",
+            }
+          }
+          style={
+            Object {
+              "flex": 1,
+              "height": 300,
+              "width": null,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 1,
+            "borderColor": "#ddd",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 5,
+            "position": "relative",
+          }
+        }
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#48BBEC",
+              "borderColor": "#48BBEC",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "height": 60,
+              "justifyContent": "center",
+              "marginLeft": 5,
+              "marginRight": 5,
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#fff",
+                "fontSize": 16,
+                "fontWeight": "600",
+                "paddingBottom": 5,
+                "paddingTop": 5,
+              }
+            }
+          >
+            Buy Now
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 0,
+          "borderColor": "#ddd",
+          "borderRadius": 2,
+          "borderWidth": 1,
+          "elevation": 1,
+          "marginTop": 10,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.1,
+          "shadowRadius": 2,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 1,
+            "borderColor": "#ddd",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 5,
+            "position": "relative",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginLeft": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg",
+              }
+            }
+            style={
+              Object {
+                "height": 50,
+                "width": 50,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "column",
+              "justifyContent": "space-around",
+              "marginLeft": 5,
+            }
+          }
+        >
+          &gt;
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 18,
+              }
+            }
+          >
+            My album title 2
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Ferri Test Numer 2
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 1,
+            "borderColor": "#ddd",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 5,
+            "position": "relative",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://images-na.ssl-images-amazon.com/images/I/61R4EBzQVwL._SS500.jpg",
+            }
+          }
+          style={
+            Object {
+              "flex": 1,
+              "height": 300,
+              "width": null,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 1,
+            "borderColor": "#ddd",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 5,
+            "position": "relative",
+          }
+        }
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#48BBEC",
+              "borderColor": "#48BBEC",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "height": 60,
+              "justifyContent": "center",
+              "marginLeft": 5,
+              "marginRight": 5,
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#fff",
+                "fontSize": 16,
+                "fontWeight": "600",
+                "paddingBottom": 5,
+                "paddingTop": 5,
+              }
+            }
+          >
+            Buy Now
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
