@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import AlbumList, { IAlbumListProps } from './AlbumList';
-import { getState, getUser_1, getAlbum_1, getAlbum_2 } from '../../../test/entities';
+import { getState, getUser_1 } from '../../../test/entities';
 
 describe('AlbumList', () => {
   let props: IAlbumListProps;

@@ -8,7 +8,7 @@ import { getTodo_1, getInitialState } from '../../../test/entities';
 import { coreState } from '../core';
 import { ActionType, actions } from './actions';
 
-describe('user epics', () => {
+describe('Tofo epics', () => {
   let deps: IEpicDependencies;
   let error;
   let state$;
@@ -20,7 +20,7 @@ describe('user epics', () => {
 
   describe('todoGetEpicGetTodoList', () => {
     const query = { page: 1, limit: 1 };
-    it('should get epic for get user list', done => {
+    it('should get epic for get todo list', done => {
       const emitedActions = [];
       todoGetEpicGetTodoList(ActionsObservable.of(actions.setListStart(query)), state$, deps).subscribe(output => {
         emitedActions.push(output);
