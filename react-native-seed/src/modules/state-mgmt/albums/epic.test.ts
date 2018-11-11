@@ -20,14 +20,12 @@ describe('Album epics', () => {
     const query = { page: 1, limit: 1 };
     it('should get epic for get album list', done => {
       const emitedActions = [];
-      albumGetEpicGetAlbumList(ActionsObservable.of(actions.setAlbumListStart(query)), state$, deps).subscribe(output => {
+      albumGetEpicGetAlbumList(ActionsObservable.of(actions.setAlbumListStart(query)), state$, deps)
+      .subscribe(output => {
         emitedActions.push(output);
-        debugger;
-        if (output.type === ActionType.SET_ALBUM_LIST_START) {
-          expect(deps.apiService.getAlbumList).toBeCalledWith(query);
-          expect(emitedActions[0]).toEqual(actions.setAlbumListSuccess([getAlbum_1()]));
-          done();
-        }
+        expect(deps.apiService.getAlbumList).toBeCalledWith(query);
+        expect(emitedActions[0]).toEqual(actions.setAlbumListSuccess([getAlbum_1()]));
+        done();
       });
     });
   });

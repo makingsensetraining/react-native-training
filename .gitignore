@@ -7,7 +7,8 @@ coverage
 .expo/
 
 # dependencies
-/node_modules
+react-native-seed/node_modules
+albumapps/node_modules
 
 # misc
 .env.local

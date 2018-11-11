@@ -9,8 +9,8 @@ describe('album reducer', () => {
   });
 
   it('should return a new state ActionType.SET_ALBUM_LIST_SUCCESS', () => {
-    const album =  [getAlbum_1()];
-    expect(reducer(undefined, actions.setAlbumListSuccess(album))).toEqual({ ...initialState, albumMap: [album] });
+    const album =  getAlbum_1();
+    expect(reducer(undefined, actions.setAlbumListSuccess([album]))).toEqual({ ...initialState, albumMap: [album] });
 
   });
 });
